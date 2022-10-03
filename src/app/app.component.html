@@ -1,0 +1,54 @@
+<!-- <ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>PL</ion-list-header>
+
+        </ion-list>
+        <ion-list *ngFor="let item of appPages">
+          <a routerLink='{{item.url}}/' routerLinkActive="router-link-active" >
+            {{item.title}}
+          </a>
+        </ion-list>
+        <ion-button color="danger">Logout</ion-button>
+
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content">
+
+    </ion-router-outlet>
+  </ion-split-pane>
+</ion-app> -->
+
+<ion-app>
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <div class="manu-header-bg"></div>
+        <div class="header-content">
+          <img src="./assets/PL.png" alt=''/>
+          <ion-label>
+            <h2>PL</h2>
+            <P>Survay</P>
+          </ion-label>
+        </div>
+      
+        <!-- <ion-list *ngFor="let item of appPages" lines="none" class="menu-items"> -->
+        <ion-list  lines="none" class="menu-items">
+          
+          <!-- <a routerLink='{{item.url}}/' routerLinkActive="router-link-active" > -->
+            <ion-item  *ngFor="let item of appPages" [routerLink]="['/' + item.url]" class="active">
+              <ion-icon name="{{item.icon}}"></ion-icon>
+              {{item.title}}
+            </ion-item>
+            
+          <!-- </a> -->
+        </ion-list>
+        <!-- <ion-button color="danger">Logout</ion-button> -->
+
+
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>
+

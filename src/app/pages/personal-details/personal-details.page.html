@@ -1,0 +1,91 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-menu-button></ion-menu-button>
+        <!-- <ion-icon slot="icon-only" name='arrow-back'></ion-icon> -->
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Personal Details
+    </ion-title>
+    <ion-buttons slot="end">
+        <ion-icon name='refresh-circle-outline'></ion-icon>
+    </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div id="header">
+    <h1>Personal Information</h1>
+  </div>
+
+  <form [formGroup]="persondetailForm">
+    <ion-card>
+    
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col class="ion-align-self-start">
+              <ion-input placeholder="Frist Name" [formControl]="persondetailForm.controls['firstname']" type="text"></ion-input>            </ion-col>
+            <ion-col class="ion-align-self-end">
+              <ion-input placeholder="Last Name" [formControl]="persondetailForm.controls['lastname']" type="text"></ion-input>              
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+              <ion-col class="ion-align-self-start">
+                <ion-textarea placeholder="Current Address" [formControl]="persondetailForm.controls['currentAddress']"></ion-textarea>
+              </ion-col>
+              <ion-col class="ion-align-self-end">
+                <ion-textarea  placeholder="Permanent Address" [formControl]="persondetailForm.controls['permanentAddress']" ></ion-textarea>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col class="ion-align-self-start">
+                <ion-input placeholder="Email" [formControl]="persondetailForm.controls['email']" type="email"></ion-input>
+              </ion-col>
+
+              <ion-col class="ion-align-self-end">
+                <ion-input placeholder="Mobile" [formControl]="persondetailForm.controls['mobile']" type="tel"></ion-input>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col class="ion-align-self-start">
+                <ion-input  placeholder="City" [formControl]="persondetailForm.controls['city']" type="text"></ion-input>
+
+                        </ion-col>
+
+              <ion-col class="ion-align-self-end">
+                <ion-input placeholder="State" [formControl]="persondetailForm.controls['state']" type="text"></ion-input>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col class="ion-align-self-start">
+                <ion-input placeholder="Country" [formControl]="persondetailForm.controls['country']" type="text"></ion-input>
+
+          
+              </ion-col>
+
+              <ion-col class="ion-align-self-end">
+                <ion-input placeholder="Pincode" [formControl]="persondetailForm.controls['pincode']" type="number"></ion-input>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+                <ion-col>     
+                  <ion-button shape="round" expand="block" (click)="onSubmit()" >Next</ion-button>
+                </ion-col>
+            </ion-row>
+            
+
+        </ion-grid>
+        
+      </ion-card-content>
+    </ion-card>
+
+  </form>
+
+</ion-content>

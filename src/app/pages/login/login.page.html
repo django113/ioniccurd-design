@@ -1,0 +1,51 @@
+ <ion-header class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-menu-button></ion-menu-button>
+        <!-- <ion-icon slot="icon-only" name='arrow-back'></ion-icon> -->
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      PL
+    </ion-title>
+
+    <ion-buttons slot="end">
+        <ion-icon name='refresh-circle-outline'></ion-icon>
+    </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <h1>Login</h1>
+    <img src="assets/PL.png" />
+
+  </div>
+  <form [formGroup]="credentialsForm" id="form">
+    <ion-item >
+      <ion-input placeholder="Email" [formControl]="credentialsForm.controls['email']" type="email" ></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-input placeholder="Password" [formControl]="credentialsForm.controls['password']"
+          type="password" ></ion-input>
+    </ion-item>
+
+    <ion-row lines="none">
+      <ion-col>
+
+        <ion-button expand="block" (click)="onSignIn()" shape="round" >Login</ion-button>
+      </ion-col>
+      <ion-col >
+        <ion-button expand="block" (click)="onForgotPassword()" shape="round" color="danger">ForgetPassword</ion-button>
+      </ion-col>
+
+    </ion-row>
+
+
+        </form>
+</ion-content>

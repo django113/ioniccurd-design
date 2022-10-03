@@ -1,0 +1,124 @@
+.main{
+  width:100%;
+  margin-left:10%;
+ 
+}
+
+fieldset {
+  border-radius: 0.6vh;
+  // --background:#3938ca;
+  // --color: #fff;
+  // border: 1vh solid #3938ca;
+  --padding: 1.68vh;
+
+}
+
+// fieldset:focus-within {
+//   border-color: #130CB7;
+// }
+
+// /* legend not changing color when focused on input */
+// fieldset:focus-within > legend {
+//   color:#f5f5f3;
+// }
+
+legend {
+  padding: 0 1.2vh;
+  color: black;
+}
+#check{
+    display:flex;
+    flex-direction:row;
+    // align-items:center;
+    // justify-content:center;
+
+  
+}
+
+// =============================================================
+// // ion-content{
+// //   // --background: linear-gradient( 135deg, #52E5E7 10%, #130CB7 100%);
+// //   --background: rgb(2,0,36);
+// //   --background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(13,63,164,1) 35%, rgba(17,86,210,0.9864320728291317) 55%, rgba(177,8,214,1) 100%);
+
+// // }
+// // ion-toolbar,.refresh{
+// //   --background: linear-gradient( 135deg, #52E5E7 10%, #130CB7 100%);
+
+// // }
+// // .login{
+// //   margin: left 9px;
+// // }
+
+
+// // ion-item{
+// //   border-radius:50px;
+// //   height:55px;
+// //   box-shadow:1px 8px 8px rgba(0,0,0,0.08);
+// //   --heighlight-height:0px;
+// //   margin-top: 10px;
+// //   ion-input{
+// //     font-size: 18px;
+// //     --padding-top:20px;
+// //     --padding-bottom:15px;
+// //     --padding-start:5px;
+
+// //   }
+// //   a{
+// //     font-size:17px;
+// //     letter-spacing:0.5px;
+// //     text-decoration:none;
+// //   }
+// // }
+// // // ==============================
+// /* Without setting height the slides will take up the height of the slide's content */
+// ion-slides {
+//   height: 100%;
+// }
+
+ion-toolbar{
+  --background:#3938ca;
+  --color: #fff;
+  // --background: #f5f5f3;
+  ion-button{
+    text-transform: initial;
+    font-size: 17px;
+  }
+  ion-icon{
+    text-transform: initial;
+    float:right;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+}
+ion-footer{
+  ion-button{
+    --background:#3938ca;
+    --color: #fff;
+  
+  }
+}
+
+
+// .swiper{
+//     width:100%;
+//     height:100%;
+// }
+
+.swiper-slide{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+
+// ===============================
+// home.page.scss
+@import '~swiper/scss';
+@import '~@ionic/angular/css/ionic-swiper';
+
+
+
+// ion-content {
+//   --offset-top: 0 !important;
+// }
